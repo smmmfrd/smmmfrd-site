@@ -15,10 +15,13 @@ export default function App() {
 					</g>
 				</svg>
 
-				<ul className={`[&>*]:text-3xl 
+				<ul className={`[&>*]:text-3xl flex flex-col gap-2
 					mt-4 pl-6 transition-all duration-150	${openNav ? "opacity-100" : "invisible opacity-0"}
-					sm:text-right sm:mt-0 sm:relative sm:block sm:opacity-100 sm:visible`}>
-					<li>Home</li>
+					sm:text-right sm:mt-0 sm:relative sm:opacity-100 sm:visible`}>
+					<li className="flex flex-row-reverse sm:flex-row justify-end items-center gap-3">
+						Home
+						<span className="inline-block w-2 h-10 bg-base-content"></span>
+					</li>
 					<li>Projects</li>
 					<li>Blog</li>
 					<li>About Me</li>
