@@ -24,7 +24,7 @@ export default function App() {
 
 					</label>
 
-					<h1 className="text-primary pb-0.5">smmmfrd.zone</h1>
+					<h1 className="text-primary font-bold pb-0.5">smmmfrd.zone</h1>
 				</div>
 
 				<ul className={`[&>*]:text-3xl flex flex-col gap-6
@@ -43,8 +43,24 @@ export default function App() {
 			<main className={`h-full mt-8 flex flex-col sm:justify-center sm:mt-0
 				${openNav ? "basis-2/3 ml-8" : "basis-full"} transition-all duration-300
 				sm:basis-1/2 sm:mt-0`}>
-				<h1 className="text-4xl mb-4">Page Title</h1>
-				<p className="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odio repellat rem a cupiditate officiis ut molestias nesciunt. Ipsam eveniet sit vero nemo dicta deleniti eum ab, explicabo voluptatum dolores.</p>
+				<h2 className="text-4xl font-bold my-4">Page Title</h2>
+				<p className="text-xl mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odio repellat rem a cupiditate officiis ut molestias nesciunt. Ipsam eveniet sit vero nemo dicta deleniti eum ab, explicabo voluptatum dolores.</p>
+				
+				<h3 className="text-2xl font-bold my-2">Section Title</h3>
+				<p className="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odio repellat rem a cupiditate officiis ut molestias nesciunt. Ipsam eveniet sit vero nemo dicta deleniti eum ab, explicabo voluptatum dolores.</p>
+				
+				<h3 className="text-2xl font-bold my-2">Section Title</h3>
+				<p className="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odio repellat rem a cupiditate officiis ut molestias nesciunt. Ipsam eveniet sit vero nemo dicta deleniti eum ab, explicabo voluptatum dolores.</p>
+				
+				<h3 className="text-2xl font-bold my-2">Section Title</h3>
+				<p className="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odio repellat rem a cupiditate officiis ut molestias nesciunt. Ipsam eveniet sit vero nemo dicta deleniti eum ab, explicabo voluptatum dolores.</p>
+				
+				<h3 className="text-2xl font-bold my-2">Section Title</h3>
+				<p className="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odio repellat rem a cupiditate officiis ut molestias nesciunt. Ipsam eveniet sit vero nemo dicta deleniti eum ab, explicabo voluptatum dolores.</p>
+				
+				<h3 className="text-2xl font-bold my-2">Section Title</h3>
+				<p className="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odio repellat rem a cupiditate officiis ut molestias nesciunt. Ipsam eveniet sit vero nemo dicta deleniti eum ab, explicabo voluptatum dolores.</p>
+				
 			</main>
 		</>
 	)
