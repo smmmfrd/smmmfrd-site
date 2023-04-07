@@ -5,19 +5,23 @@ export default function App() {
 
 	return (
 		<>
-			<nav className={`sm:flex-1 transition-all duration-150 ${openNav ? "flex-1" : "w-0"} h-full flex flex-col sm:justify-center`}>
-				<svg className="sm:hidden absolute top-4 left-4 stroke-primary cursor-pointer" onClick={() => setOpenNav(prev => !prev)}
-					xmlns="http://www.w3.org/2000/svg" width="27.329" height="17" viewBox="0 0 27.329 17">
-					<g id="menu" transform="translate(-415.671 -19)">
-						<line id="Line_1" data-name="Line 1" x1="24.329" transform="translate(417.171 34.5)" fill="none" stroke-linecap="round" stroke-width="3" />
-						<line id="Line_2" data-name="Line 2" x1="24.329" transform="translate(417.171 27.5)" fill="none" stroke-linecap="round" stroke-width="3" />
-						<line id="Line_3" data-name="Line 3" x1="24.329" transform="translate(417.171 20.5)" fill="none" stroke-linecap="round" stroke-width="3" />
-					</g>
-				</svg>
+			<nav className={`sm:flex-1 transition-transform duration-500 ${openNav ? "pr-4 w-min" : "w-0"} h-full flex flex-col sm:pr-0 sm:justify-center overflow-hidden`}>
+				<div className="absolute top-4 left-4 flex gap-4 leading-4">
+					<svg className="sm:hidden stroke-primary cursor-pointer" onClick={() => setOpenNav(prev => !prev)}
+						xmlns="http://www.w3.org/2000/svg" width="27.329" height="17" viewBox="0 0 27.329 17">
+						<g id="menu" transform="translate(-415.671 -19)">
+							<line id="Line_1" data-name="Line 1" x1="24.329" transform="translate(417.171 34.5)" fill="none" stroke-linecap="round" stroke-width="3" />
+							<line id="Line_2" data-name="Line 2" x1="24.329" transform="translate(417.171 27.5)" fill="none" stroke-linecap="round" stroke-width="3" />
+							<line id="Line_3" data-name="Line 3" x1="24.329" transform="translate(417.171 20.5)" fill="none" stroke-linecap="round" stroke-width="3" />
+						</g>
+					</svg>
+					<h1 className="text-primary">smmmfrd.zone</h1>
+				</div>
 
+				{/* -ml-4 */}
 				<ul className={`[&>*]:text-3xl flex flex-col gap-2
-					mt-4 pl-6 transition-all duration-150	${openNav ? "opacity-100" : "invisible opacity-0"}
-					sm:text-right sm:mt-0 sm:relative sm:opacity-100 sm:visible`}>
+					mt-4 pl-7 transition-all duration-500	${openNav ? "opacity-100" : "opacity-0"}
+					sm:text-right sm:mt-0 sm:relative sm:opacity-100`}>
 					<li className="flex flex-row-reverse sm:flex-row justify-end items-center gap-3">
 						Home
 						<span className="inline-block w-2 h-10 bg-base-content"></span>
