@@ -1,8 +1,12 @@
+import { useState } from "react"
+
 export default function App() {
+	const [openNav, setOpenNav] = useState(false);
+
 	return (
 		<>
-			<nav className="sm:flex-1 h-full flex flex-col justify-center">
-				<svg className="sm:hidden absolute top-4 left-4 stroke-primary cursor-pointer"
+			<nav className={`sm:flex-1 transition-all duration-150 ${openNav ? "flex-1" : "w-0"} h-full flex flex-col sm:justify-center`}>
+				<svg className="sm:hidden absolute top-4 left-4 stroke-primary cursor-pointer" onClick={() => setOpenNav(prev => !prev)}
 					xmlns="http://www.w3.org/2000/svg" width="27.329" height="17" viewBox="0 0 27.329 17">
 					<g id="menu" transform="translate(-415.671 -19)">
 						<line id="Line_1" data-name="Line 1" x1="24.329" transform="translate(417.171 34.5)" fill="none" stroke-linecap="round" stroke-width="3" />
@@ -11,8 +15,9 @@ export default function App() {
 					</g>
 				</svg>
 
-				<ul className="text-right [&>*]:text-3xl
-					hidden sm:block ">
+				<ul className={`[&>*]:text-3xl 
+					mt-4 pl-6 transition-all duration-150	${openNav ? "opacity-100" : "invisible opacity-0"}
+					sm:text-right sm:mt-0 sm:relative sm:block sm:opacity-100 sm:visible`}>
 					<li>Home</li>
 					<li>Projects</li>
 					<li>Blog</li>
