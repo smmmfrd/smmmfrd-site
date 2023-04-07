@@ -6,25 +6,28 @@ export default function App() {
 	return (
 		<>
 			<nav className={`sm:flex-1 transition-transform duration-500 ${openNav ? "pr-4 w-min" : "w-0"} h-full flex flex-col sm:pr-0 sm:justify-center overflow-hidden`}>
-				<div className="absolute top-4 left-4 flex gap-4 leading-4">
-					<svg className="sm:hidden stroke-primary cursor-pointer" onClick={() => setOpenNav(prev => !prev)}
-						xmlns="http://www.w3.org/2000/svg" width="27.329" height="17" viewBox="0 0 27.329 17">
-						<g id="menu" transform="translate(-415.671 -19)">
-							<line id="Line_1" data-name="Line 1" x1="24.329" transform="translate(417.171 34.5)" fill="none" stroke-linecap="round" stroke-width="3" />
-							<line id="Line_2" data-name="Line 2" x1="24.329" transform="translate(417.171 27.5)" fill="none" stroke-linecap="round" stroke-width="3" />
-							<line id="Line_3" data-name="Line 3" x1="24.329" transform="translate(417.171 20.5)" fill="none" stroke-linecap="round" stroke-width="3" />
-						</g>
-					</svg>
+				<div className="absolute top-2 left-2 flex gap-2 items-center">
+					{/* Open/Close Button */}
+					<label className="btn btn-circle btn-ghost swap swap-rotate">
+						{/* this hidden checkbox controls the state */}
+						<input type="checkbox" onClick={() => setOpenNav(prev => !prev)}/>
+
+						{/* hamburger icon */}
+						<svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
+
+						{/* close icon */}
+						<svg className="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" /></svg>
+
+					</label>
 					<h1 className="text-primary">smmmfrd.zone</h1>
 				</div>
 
-				{/* -ml-4 */}
 				<ul className={`[&>*]:text-3xl flex flex-col gap-2
-					mt-4 pl-7 transition-all duration-500	${openNav ? "opacity-100" : "opacity-0"}
+					mt-4 pl-8 transition-all duration-500	${openNav ? "opacity-100" : "opacity-0"}
 					sm:text-right sm:mt-0 sm:relative sm:opacity-100`}>
 					<li className="flex flex-row-reverse sm:flex-row justify-end items-center gap-3">
 						Home
-						<span className="inline-block w-2 h-10 bg-base-content"></span>
+						<span className="inline-block w-2 h-9 bg-base-content"></span>
 					</li>
 					<li>Projects</li>
 					<li>Blog</li>
