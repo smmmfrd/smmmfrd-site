@@ -9,7 +9,7 @@ export default function Navbar() {
 	return (
 		<>
 			<nav className={`overflow-hidden
-				${openNav ? "basis-1/3" : "basis-0"} transition-all duration-300
+				${openNav ? "min-w-fit basis-1/3" : "basis-0"} transition-all duration-300
 				sm:basis-1/3 sm:pr-0 sm:relative sm:overflow-visible`}>
 
 				<div className="absolute top-2 left-2 flex gap-2 items-center
@@ -40,7 +40,7 @@ export default function Navbar() {
 				</ul>
 			</nav>
 			<main className={`h-full mt-8 flex flex-col sm:justify-center sm:mt-0
-				${openNav ? "basis-2/3 ml-8" : "basis-full"} transition-all duration-300
+				${openNav ? "ml-8" : "basis-full"} transition-all duration-300
 				sm:basis-2/3 sm:mt-0`}>
 				
 				<Outlet />
