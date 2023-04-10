@@ -35,9 +35,8 @@ export default function Navbar() {
 					sm:sticky sm:top-1/3 sm:justify-center`}>
 					<NavButton title={"Home"} dest={"/"}/>
 					<NavButton title={"Projects"} dest={"/projects"}/>
-					<li>Blog</li>
-					<li>About Me</li>
-					<li>Contact</li>
+					<NavButton title={"About Me"} dest={"/about"}/>
+					<NavButton title={"Contact"} dest={"/contact"}/>
 				</ul>
 			</nav>
 			<main className={`h-full mt-8 flex flex-col sm:justify-center sm:mt-0
