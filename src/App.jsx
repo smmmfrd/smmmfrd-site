@@ -7,9 +7,8 @@ export default function App() {
 
 	const router = createBrowserRouter(createRoutesFromElements(
 		<Route element={<Navbar />}>
-			<Route path="/" element={<Home />}>
-
-			</Route>
+			<Route path="/" element={<Home />} />
+			<Route path="/projects" element={<Home />} />
 		</Route>
 	));
 

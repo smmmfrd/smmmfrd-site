@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Outlet } from "react-router-dom";
+import NavButton from "./NavButton";
 
 export default function Navbar() {
 	const [openNav, setOpenNav] = useState(false);
@@ -32,11 +33,8 @@ export default function Navbar() {
 				<ul className={`[&>*]:text-3xl flex flex-col gap-6 mt-8 pl-8
 					sm:text-right sm:mt-0
 					sm:sticky sm:top-1/3 sm:justify-center`}>
-					<li className="flex flex-row-reverse sm:flex-row justify-end items-center gap-3">
-						Home
-						<span className="inline-block w-2 h-9 bg-base-content"></span>
-					</li>
-					<li>Projects</li>
+					<NavButton title={"Home"} dest={"/"}/>
+					<NavButton title={"Projects"} dest={"/projects"}/>
 					<li>Blog</li>
 					<li>About Me</li>
 					<li>Contact</li>
