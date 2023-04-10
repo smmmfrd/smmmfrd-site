@@ -5,12 +5,12 @@ export default function App() {
 
 	return (
 		<>
-			<nav className={`h-full flex flex-col overflow-hidden
+			<nav className={`overflow-hidden
 				${openNav ? "basis-1/3" : "basis-0"} transition-all duration-300
-				sm:basis-1/2 sm:pr-0 sm:justify-center`}>
+				sm:basis-1/3 sm:pr-0 sm:relative sm:overflow-visible`}>
 
 				<div className="absolute top-2 left-2 flex gap-2 items-center
-					sm:top-4 sm:left-4">
+					sm:sticky sm:top-6">
 					{/* Open/Close Button */}
 					<label className="sm:hidden btn btn-circle btn-ghost swap swap-rotate">
 						{/* this hidden checkbox controls the state */}
@@ -27,9 +27,9 @@ export default function App() {
 					<h1 className="text-primary font-bold pb-0.5">smmmfrd.zone</h1>
 				</div>
 
-				<ul className={`[&>*]:text-3xl flex flex-col gap-6
-					mt-8 pl-8
-					sm:text-right sm:mt-0 sm:relative sm:opacity-100`}>
+				<ul className={`[&>*]:text-3xl flex flex-col gap-6 mt-8 pl-8
+					sm:text-right sm:mt-0
+					sm:sticky sm:top-1/3 sm:justify-center`}>
 					<li className="flex flex-row-reverse sm:flex-row justify-end items-center gap-3">
 						Home
 						<span className="inline-block w-2 h-9 bg-base-content"></span>
@@ -42,7 +42,7 @@ export default function App() {
 			</nav>
 			<main className={`h-full mt-8 flex flex-col sm:justify-center sm:mt-0
 				${openNav ? "basis-2/3 ml-8" : "basis-full"} transition-all duration-300
-				sm:basis-1/2 sm:mt-0`}>
+				sm:basis-2/3 sm:mt-0`}>
 				<h2 className="text-4xl font-bold my-4">Page Title</h2>
 				<p className="text-xl mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius odio repellat rem a cupiditate officiis ut molestias nesciunt. Ipsam eveniet sit vero nemo dicta deleniti eum ab, explicabo voluptatum dolores.</p>
 				
