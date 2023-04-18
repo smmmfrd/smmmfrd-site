@@ -15,7 +15,7 @@ export default function Navbar() {
 		<>
 			<nav className={`overflow-hidden
 				${openNav ? "min-w-fit basis-1/3" : "basis-0"} transition-all duration-300
-				sm:basis-1/3 sm:pr-0 sm:relative sm:overflow-visible`}>
+				sm:basis-1/4 sm:pr-0 sm:relative sm:overflow-visible`}>
 
 				<div className="absolute top-2 left-2 flex gap-2 items-center
 					sm:sticky sm:top-8 sm:left-0 sm:flex-row-reverse">
@@ -60,7 +60,7 @@ export default function Navbar() {
 					</button>
 				</div>
 
-				<ul className={`[&>*]:text-3xl flex flex-col gap-6 mt-8 pl-8
+				<ul className={`[&>*]:text-2xl flex flex-col gap-6 mt-8 pl-8
 					sm:text-right sm:mt-0
 					sm:sticky sm:top-1/3 sm:justify-center`}>
 					<NavButton title={"Home"} dest={"/"} />
@@ -71,7 +71,7 @@ export default function Navbar() {
 			</nav>
 			<main className={`h-full mt-8 flex flex-col sm:justify-center sm:mt-0
 				${openNav ? "ml-8" : "basis-full"} transition-all duration-300
-				sm:basis-2/3 sm:mt-0`}>
+				sm:basis-3/4 sm:mt-0 sm:pt-2`}>
 
 				<Outlet />
 

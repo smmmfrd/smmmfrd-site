@@ -1,7 +1,7 @@
 export default function Home() {
 	return (
 		<>
-			<p>Home</p>	
+			<h2 className="text-4xl font-bold">Time to get firebase in.</h2>
 		</>
 	)
 }
