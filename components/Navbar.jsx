@@ -10,9 +10,6 @@ export default function Navbar() {
 	useEffect(() => {
 		// setOpenNav(false);
 		const selected = document.querySelector(".nav-active");
-		console.log(selected.offsetTop);
-
-		// activeLinkSelector.current.top = selected.offsetTop;
 		setActiveLinkStyles({
 			top: selected.offsetTop
 		});
@@ -72,10 +69,12 @@ export default function Navbar() {
 					</button>
 				</div>
 
-				<ul className={`[&>*]:text-2xl flex flex-col gap-6 mt-8 pl-11
+				<ul className={`[&>*]:text-2xl flex flex-col gap-6 mt-8 pl-11 relative
 					sm:text-right sm:mt-0
 					sm:sticky sm:top-1/3 sm:justify-center`}>
-					<span ref={activeLinkSelector} className="absolute top-0 left-0 w-2 h-9 bg-base-content transition-all" style={activeLinkStyles}></span>
+					
+					<span ref={activeLinkSelector} className="absolute top-0 left-6 w-2 h-9 bg-base-content transition-all sm:left-full" style={activeLinkStyles}></span>
+
 					<NavButton title={"Home"} dest={"/"} />
 					<NavButton title={"Projects"} dest={"/projects"} />
 					<NavButton title={"About Me"} dest={"/about"} />

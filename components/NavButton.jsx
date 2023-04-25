@@ -5,7 +5,7 @@ export default function ({ title, dest }) {
 	return (
 		<li>
 			<NavLink to={dest}
-				className={({ isActive }) => `flex flex-row-reverse sm:flex-row justify-end items-center
+				className={({ isActive }) => `flex items-center justify-start sm:justify-end sm:pr-3
 				${isActive && "nav-active"}`}>
 				{title}
 			</NavLink>
