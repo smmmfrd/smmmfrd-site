@@ -13,7 +13,7 @@ export default function Navbar() {
 	const [darkMode, setDarkMode] = useState(true);
 
 	useEffect(() => {
-		document.querySelector('html').setAttribute('data-theme', darkMode ? 'night' : 'winter');
+		document.querySelector('html').setAttribute('data-theme', darkMode ? 'forest' : 'garden');
 	}, [darkMode]);
 
 	return (
@@ -23,7 +23,7 @@ export default function Navbar() {
 				sm:basis-1/4 sm:pr-0 sm:relative sm:overflow-visible`}>
 
 				<div className="absolute top-2 left-2 flex gap-2 items-center
-					sm:sticky sm:top-8 sm:left-0 sm:flex-row-reverse">
+					sm:fixed sm:top-8 sm:left-7">
 					{/* Open/Close Button */}
 					<button className="btn btn-circle btn-ghost sm:hidden" value={openNav} onClick={() => setOpenNav(prev => !prev)}>
 						{
@@ -39,7 +39,7 @@ export default function Navbar() {
 
 					{/* Dark Mode Switcher from - https://www.freecodecamp.org/news/how-to-build-a-dark-mode-switcher-with-tailwind-css-and-flowbite/ */}
 					<button
-						className="btn btn-square btn-ghost text-sm p-2.5"
+						className="text-sm pb-0.5"
 						onClick={() => setDarkMode(prev => !prev)}
 					>
 						<svg className={`w-5 h-5 fill-primary ${darkMode ? "" : "hidden"}`}
