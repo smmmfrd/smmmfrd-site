@@ -1,11 +1,22 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Outlet, useLocation } from "react-router-dom";
 import NavButton from "./NavButton";
 
 export default function Navbar() {
 	const location = useLocation();
+	const activeLinkSelector = useRef(null);
+	const [activeLinkStyles, setActiveLinkStyles] = useState({});
+
 	useEffect(() => {
-		setOpenNav(false);
+		// setOpenNav(false);
+		const selected = document.querySelector(".nav-active");
+		console.log(selected.offsetTop);
+
+		// activeLinkSelector.current.top = selected.offsetTop;
+		setActiveLinkStyles({
+			top: selected.offsetTop
+		});
+
 	}, [location.pathname]);
 
 	const [openNav, setOpenNav] = useState(false);
@@ -64,6 +75,7 @@ export default function Navbar() {
 				<ul className={`[&>*]:text-2xl flex flex-col gap-6 mt-8 pl-11
 					sm:text-right sm:mt-0
 					sm:sticky sm:top-1/3 sm:justify-center`}>
+					<span ref={activeLinkSelector} className="absolute top-0 left-0 w-2 h-9 bg-base-content transition-all" style={activeLinkStyles}></span>
 					<NavButton title={"Home"} dest={"/"} />
 					<NavButton title={"Projects"} dest={"/projects"} />
 					<NavButton title={"About Me"} dest={"/about"} />
