@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { Outlet, useLocation } from "react-router-dom";
 import NavButton from "./NavButton";
 
-export default function Navbar() {
+export default function Layout() {
 	const location = useLocation();
 	const activeLinkSelector = useRef(null);
 	const [activeLinkStyles, setActiveLinkStyles] = useState({});
